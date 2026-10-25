@@ -2,8 +2,8 @@
 # Gate del repositorio. Es el mismo comando en la máquina y en el CI: si algo falla,
 # sale con código distinto de cero y nada se promueve de rama.
 #
-#   ./scripts/verificar.sh                         las fuentes se confieren en GitHub
-#   FONTES_DIR=<clones> ./scripts/verificar.sh     las fuentes se confieren en clones locales
+#   ./scripts/verificar.sh                         las fuentes se comprueban en GitHub
+#   FONTES_DIR=<clones> ./scripts/verificar.sh     las fuentes se comprueban en clones locales
 #
 # "No verificado" se informa como aviso, nunca como verde.
 set -uo pipefail

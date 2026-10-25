@@ -4,7 +4,7 @@
 // Imprime una línea por resultado, con el prefijo "ok:", "mal:" o "aviso:", y la lee
 // scripts/verificar.sh. Sale con 1 si hubo algún "mal:".
 //
-//   FONTES_DIR=<carpeta con los clones>  confiere con git en los clones locales
+//   FONTES_DIR=<carpeta con los clones>  comprueba con git en los clones locales
 //   sin FONTES_DIR                        pregunta a raw.githubusercontent.com (HEAD)
 import fs from "node:fs";
 import path from "node:path";
@@ -174,7 +174,7 @@ if (fontes) {
 for (const ruta of faltan) mal(`fuente que no existe en el commit fijado: ${ruta} (citada en ${citadas.get(ruta).join(", ")})`);
 if (noVerificadas) {
 	const m = `${noVerificadas} de ${rutas.length} fuentes sin respuesta (no verificado)`;
-	// En el CI hay red: lo que no se pudo conferir es una falla, no un aviso.
+	// En el CI hay red: lo que no se pudo comprobar es una falla, no un aviso.
 	if (process.env.CI === "true") mal(m);
 	else aviso(m);
 }

@@ -1,6 +1,6 @@
 # Gate del repositorio en cada push y pull request de las tres ramas.
 # El mismo ./scripts/verificar.sh que se corre en la máquina. Sin FONTES_DIR, las
-# fuentes citadas se confieren en raw.githubusercontent.com, en el commit fijado.
+# fuentes citadas se comprueban en raw.githubusercontent.com, en el commit fijado.
 name: ci
 
 on:
