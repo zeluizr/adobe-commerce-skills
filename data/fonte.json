@@ -1,0 +1,41 @@
+{
+	"descripcion": "Las fuentes de las skills: repositorios de documentación de AdobeDocs, fijados en un commit. Cada ruta citada en una sección Reference existe en ese commit.",
+	"fuentes": [
+		{
+			"repo": "commerce-php",
+			"url": "https://github.com/AdobeDocs/commerce-php",
+			"commit": "80d81d1922af3e1669a2535370a31138708cadff",
+			"licencia": "Apache-2.0",
+			"archivoLicencia": "LICENSE",
+			"sitio": "https://developer.adobe.com/commerce/php/",
+			"raizPaginas": "src/pages"
+		},
+		{
+			"repo": "commerce-frontend-core",
+			"url": "https://github.com/AdobeDocs/commerce-frontend-core",
+			"commit": "e5fdcee72dbe04d2e5c9d4479f7fe60070477a5d",
+			"licencia": "Apache-2.0",
+			"archivoLicencia": "LICENSE",
+			"sitio": "https://developer.adobe.com/commerce/frontend-core/",
+			"raizPaginas": "src/pages"
+		},
+		{
+			"repo": "commerce-webapi",
+			"url": "https://github.com/AdobeDocs/commerce-webapi",
+			"commit": "8e7aaed872aa5bf53d979e6c13abb7a4952a8672",
+			"licencia": "Apache-2.0",
+			"archivoLicencia": "LICENSE",
+			"sitio": "https://developer.adobe.com/commerce/webapi/",
+			"raizPaginas": "src/pages"
+		},
+		{
+			"repo": "commerce-operations.en",
+			"url": "https://github.com/AdobeDocs/commerce-operations.en",
+			"commit": "b9382dc0f240bcebddcb833940f6074854949964",
+			"licencia": "MIT",
+			"archivoLicencia": "license.md",
+			"sitio": "https://experienceleague.adobe.com/en/docs/commerce-operations/",
+			"raizPaginas": "help"
+		}
+	]
+}
