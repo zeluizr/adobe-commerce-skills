@@ -1,0 +1,47 @@
+adobe-commerce-skills
+Copyright (c) 2026 José Luiz Rodrigues
+
+This repository is licensed under the MIT License (see LICENSE).
+
+The skills in skills/ are original text written from the public Adobe Commerce
+documentation listed below. Code examples are adapted from the examples in that
+documentation, with vendor and module names changed to generic ones. No code
+from the magento/magento2 repository is included.
+
+Each SKILL.md ends with a "Reference" section that lists the exact source files
+it was written from and the public page of each one. The commits below are the
+versions that were read.
+
+1. commerce-php
+   https://github.com/AdobeDocs/commerce-php
+   Commit 80d81d1922af3e1669a2535370a31138708cadff
+   Copyright 2015-2020 Adobe. All rights reserved.
+   Licensed under the Apache License, Version 2.0 (LICENSE in that repository).
+   Published at https://developer.adobe.com/commerce/php/
+
+2. commerce-frontend-core
+   https://github.com/AdobeDocs/commerce-frontend-core
+   Commit e5fdcee72dbe04d2e5c9d4479f7fe60070477a5d
+   Copyright 2015-2025 Adobe. All rights reserved.
+   Licensed under the Apache License, Version 2.0 (LICENSE in that repository).
+   Published at https://developer.adobe.com/commerce/frontend-core/
+
+3. commerce-webapi
+   https://github.com/AdobeDocs/commerce-webapi
+   Commit 8e7aaed872aa5bf53d979e6c13abb7a4952a8672
+   Copyright 2015-2020 Adobe. All rights reserved.
+   Licensed under the Apache License, Version 2.0 (LICENSE in that repository).
+   Published at https://developer.adobe.com/commerce/webapi/
+
+4. commerce-operations.en
+   https://github.com/AdobeDocs/commerce-operations.en
+   Commit b9382dc0f240bcebddcb833940f6074854949964
+   Copyright 2021-2026 Adobe. All rights reserved.
+   Licensed under the MIT License (license.md in that repository).
+   Published at https://experienceleague.adobe.com/en/docs/commerce-operations/
+
+You may obtain a copy of the Apache License, Version 2.0, at
+http://www.apache.org/licenses/LICENSE-2.0
+
+Adobe and Adobe Commerce are trademarks of Adobe. This project is not
+affiliated with, endorsed by, or sponsored by Adobe.
