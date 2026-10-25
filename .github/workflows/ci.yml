@@ -1,0 +1,31 @@
+# Gate del repositorio en cada push y pull request de las tres ramas.
+# El mismo ./scripts/verificar.sh que se corre en la máquina. Sin FONTES_DIR, las
+# fuentes citadas se confieren en raw.githubusercontent.com, en el commit fijado.
+name: ci
+
+on:
+  push:
+    branches: [dev, qa, main]
+  pull_request:
+    branches: [dev, qa, main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: gate del repositorio
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: ./scripts/verificar.sh
