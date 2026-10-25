@@ -287,14 +287,14 @@ The first `cron:run` queues jobs and the second runs them; it must occur on or a
 
 ## Reference
 
-- [Cron jobs](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cron/custom-cron) (source: `commerce-operations.en/help/configuration/cron/custom-cron.md`)
-- [Customizing crons reference](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cron/custom-cron-reference) (source: `commerce-operations.en/help/configuration/cron/custom-cron-reference.md`)
-- [Configure a custom cron job](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cron/custom-cron-tutorial) (source: `commerce-operations.en/help/configuration/cron/custom-cron-tutorial.md`)
+- [Cron jobs](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/crons/custom-cron) (source: `commerce-operations.en/help/configuration/cron/custom-cron.md`)
+- [Customizing crons reference](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/crons/custom-cron-reference) (source: `commerce-operations.en/help/configuration/cron/custom-cron-reference.md`)
+- [Configure a custom cron job](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/crons/custom-cron-tutorial) (source: `commerce-operations.en/help/configuration/cron/custom-cron-tutorial.md`)
 - [Configure cron jobs](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs) (source: `commerce-operations.en/help/configuration/cli/configure-cron-jobs.md`)
 - [Message queues](https://developer.adobe.com/commerce/php/development/components/message-queues/) (source: `commerce-php/src/pages/development/components/message-queues/index.md`)
 - [Configure message queues](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration) (source: `commerce-php/src/pages/development/components/message-queues/configuration.md`)
 - [Bulk operations](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations) (source: `commerce-php/src/pages/development/components/message-queues/bulk-operations.md`)
-- [Message queues overview](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/queues/message-queue-framework) (source: `commerce-operations.en/help/configuration/queues/message-queue-framework.md`)
-- [Manage message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/queues/manage-message-queues) (source: `commerce-operations.en/help/configuration/queues/manage-message-queues.md`)
+- [Message queues overview](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework) (source: `commerce-operations.en/help/configuration/queues/message-queue-framework.md`)
+- [Manage message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) (source: `commerce-operations.en/help/configuration/queues/manage-message-queues.md`)
 - [Start message queue consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/start-message-queues) (source: `commerce-operations.en/help/configuration/cli/start-message-queues.md`)
-- [env.php reference](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/reference/config-reference-envphp) (source: `commerce-operations.en/help/configuration/reference/config-reference-envphp.md`)
+- [env.php reference](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-envphp) (source: `commerce-operations.en/help/configuration/reference/config-reference-envphp.md`)

@@ -35,7 +35,15 @@
 			"licencia": "MIT",
 			"archivoLicencia": "license.md",
 			"sitio": "https://experienceleague.adobe.com/en/docs/commerce-operations/",
-			"raizPaginas": "help"
+			"raizPaginas": "help",
+			"notaRutas": "Experience League publica algunas carpetas con otro nombre. Medido el 25/10/2026: la URL con la ruta del repositorio da 404 y la de rutasPublicadas da 200. Gana el prefijo más largo.",
+			"rutasPublicadas": {
+				"configuration/bootstrap/": "configuration-guide/setup/",
+				"configuration/cli/static-view-": "configuration-guide/cli/static-view/static-view-",
+				"configuration/cron/": "configuration-guide/crons/",
+				"configuration/queues/": "configuration-guide/message-queues/",
+				"configuration/reference/": "configuration-guide/files/"
+			}
 		}
 	]
 }

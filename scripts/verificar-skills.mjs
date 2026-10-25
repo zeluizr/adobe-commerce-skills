@@ -51,10 +51,15 @@ function urlDe(ruta) {
 	const f = porRepo[repo];
 	const interior = resto.join("/");
 	if (repo === "commerce-operations.en") {
-		const [, libro, ...pagina] = interior.split("/");
+		const enHelp = interior.replace(/^help\//, "").replace(/\.md$/, "");
+		const prefijo = Object.keys(f.rutasPublicadas || {})
+			.filter((k) => enHelp.startsWith(k))
+			.sort((a, b) => b.length - a.length)[0];
+		if (prefijo) return `${f.sitio}${f.rutasPublicadas[prefijo]}${enHelp.slice(prefijo.length)}`;
+		const [libro, ...pagina] = enHelp.split("/");
 		const destino = LIBROS[libro];
 		if (!destino) return null;
-		return `${f.sitio}${destino}/${pagina.join("/").replace(/\.md$/, "")}`;
+		return `${f.sitio}${destino}/${pagina.join("/")}`;
 	}
 	const pagina = interior.replace(/^src\/pages\//, "");
 	if (pagina === "index.md") return f.sitio;
@@ -171,7 +176,8 @@ if (fontes) {
 		})
 	);
 }
-for (const ruta of faltan) mal(`fuente que no existe en el commit fijado: ${ruta} (citada en ${citadas.get(ruta).join(", ")})`);
+for (const ruta of faltan)
+	mal(`fuente que no existe en el commit fijado: ${ruta} (citada en ${citadas.get(ruta).join(", ")})`);
 if (noVerificadas) {
 	const m = `${noVerificadas} de ${rutas.length} fuentes sin respuesta (no verificado)`;
 	// En el CI hay red: lo que no se pudo comprobar es una falla, no un aviso.
@@ -179,6 +185,8 @@ if (noVerificadas) {
 	else aviso(m);
 }
 if (!faltan.length && !noVerificadas)
-	ok(`las ${rutas.length} fuentes citadas existen en el commit fijado (${fontes ? "clones locales" : "raw.githubusercontent.com"})`);
+	ok(
+		`las ${rutas.length} fuentes citadas existen en el commit fijado (${fontes ? "clones locales" : "raw.githubusercontent.com"})`
+	);
 
 process.exit(fallo ? 1 : 0);
