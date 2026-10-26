@@ -1,38 +1,29 @@
+<p align="center">
+  <img src="assets/banner.png" width="100%" alt="adobe-commerce-skills · Once skills para el desarrollo PHP de Adobe Commerce, cada regla con su fuente oficial">
+</p>
+
 # adobe-commerce-skills
 
-**Once skills de agente para el desarrollo PHP de Adobe Commerce (Magento): módulos, inyección de dependencias,
-eventos, layout y templates, el frontend de Luma, el esquema declarativo, la web API, la seguridad, el cache, cron y
-colas, y el deploy. Para la edición open source y para Adobe Commerce, en la nube (PaaS) o en servidor propio.**
+**Once skills de agente para el desarrollo PHP de Adobe Commerce, cada regla con su fuente oficial.**
 
-Cada regla sale de la documentación oficial de Adobe Commerce, fijada en un commit, y cada skill termina con la lista
-de las páginas de donde salió. Gratis y de código abierto.
+![license](https://img.shields.io/github/license/zeluizr/adobe-commerce-skills?labelColor=005278&color=FFBD38)
+![last commit](https://img.shields.io/github/last-commit/zeluizr/adobe-commerce-skills?labelColor=005278&color=FFBD38)
 
-[![licencia](https://badgen.net/github/license/zeluizr/adobe-commerce-skills?color=142032)](./LICENSE)
-[![último commit](https://badgen.net/github/last-commit/zeluizr/adobe-commerce-skills)](https://github.com/zeluizr/adobe-commerce-skills/commits)
-[![estrellas](https://badgen.net/github/stars/zeluizr/adobe-commerce-skills)](https://github.com/zeluizr/adobe-commerce-skills/stargazers)
-
-Versión 0.1.0, según [CHANGELOG.md](CHANGELOG.md).
-
----
-
-## Por qué existe
-
-Las skills oficiales de Adobe, [adobe/skills](https://github.com/adobe/skills), traen para Adobe Commerce solo las de
-App Builder (`commerce-app-*`, sobre `aio-commerce-sdk`): extensiones que corren fuera de la tienda. Nada cubre el
-código PHP que vive dentro de ella: el módulo, el `di.xml`, el layout, los templates, el `db_schema.xml`, el
-`webapi.xml`, el cache, cron y las colas, el deploy. Este repositorio llena ese hueco y no repite lo de App Builder:
-para eso, las oficiales.
+## Instalación
 
 ```bash
-npx skills add adobe/skills
+npx skills add zeluizr/adobe-commerce-skills
 ```
 
-Las skills siguen el formato Agent Skills (`skills/<nombre>/SKILL.md`) y la estructura de
-[vtex/skills](https://github.com/vtex/skills): cuándo aplica y cuándo no, reglas de decisión, restricciones con el
-porqué, cómo detectarlas y un ejemplo correcto y uno incorrecto, el patrón recomendado, los errores comunes, una lista
-de revisión y la referencia. Están en inglés, como la documentación de donde salen.
+Con el CLI de GitHub, `gh skill install zeluizr/adobe-commerce-skills`. `--scope user` las deja disponibles en todos los proyectos.
 
-## Qué incluye
+## Uso rápido
+
+Instaladas, el agente las carga solo cuando la tarea las pide. Por ejemplo, "agrega un plugin around a `Magento\Checkout\Model\Cart::addProduct`" activa `adobe-commerce-di-and-plugins`, y "crea la tabla `acme_review` con su whitelist" activa `adobe-commerce-db-schema`. Para forzar una, nómbrala en el pedido.
+
+## Que incluye
+
+Para Adobe Commerce (Magento Open Source) en la nube (PaaS) o en servidor propio: módulos, inyección de dependencias, eventos, layout y templates, el frontend de Luma, el esquema declarativo, la Web API, la seguridad, el cache, cron y colas, y el deploy.
 
 | Skill                                                                                          | Cuándo se usa                                                                                                                    | Fuentes |
 | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -48,28 +39,21 @@ de revisión y la referencia. Están en inglés, como la documentación de donde
 | [`adobe-commerce-cron-and-queues`](skills/adobe-commerce-cron-and-queues/SKILL.md)             | `crontab.xml`, cron groups, message queues, consumers y bulk operations.                                                         | 11      |
 | [`adobe-commerce-deploy-and-modes`](skills/adobe-commerce-deploy-and-modes/SKILL.md)           | Los modos, `setup:upgrade`, `setup:di:compile`, static content deploy, `config.php` y `env.php`, y el pipeline de deploy.        | 19      |
 
-La columna Fuentes cuenta las páginas de la documentación que cita la sección Reference de cada skill.
+La columna Fuentes cuenta las páginas de la documentación que cita la sección Reference de cada skill. Las skills siguen el formato Agent Skills (`skills/<nombre>/SKILL.md`) y la estructura de [vtex/skills](https://github.com/vtex/skills): cuándo aplica y cuándo no, reglas de decisión, restricciones con el porque, como detectarlas y un ejemplo correcto y uno incorrecto, el patrón recomendado, los errores comunes, una lista de revisión y la referencia. Están en inglés, como la documentación de donde salen. Código abierto y sin costo.
 
-## Instalación
+## Por que existe
 
-```bash
-npx skills add zeluizr/adobe-commerce-skills
-```
+Las skills oficiales de Adobe, [adobe/skills](https://github.com/adobe/skills), traen para Adobe Commerce solo las de App Builder (`commerce-app-*`, sobre `aio-commerce-sdk`): extensiones que corren fuera de la tienda. Nada cubría el código PHP que vive dentro de ella: el módulo, el `di.xml`, el layout, los templates, el `db_schema.xml`, el `webapi.xml`, el cache, cron y las colas, el deploy. Este repositorio llena ese hueco y no repite lo de App Builder: para eso, ocupa las oficiales con `npx skills add adobe/skills`.
 
-o, con el CLI de GitHub:
+## Documentación
 
-```bash
-gh skill install zeluizr/adobe-commerce-skills
-```
+### Por que no es un plugin de Claude Code
 
-`--scope user` las deja disponibles en todos los proyectos. El repositorio no es un plugin de Claude Code a
-propósito: instaladas como plugin, las skills ganan el nombre del plugin adelante y los agentes que las precargan por
-nombre (como el futuro `adobe-commerce-agents`) dejan de encontrarlas.
+A propósito: instaladas como plugin, las skills ganan el nombre del plugin adelante, y los agentes que las precargan por nombre, como [adobe-commerce-agents](https://github.com/zeluizr/adobe-commerce-agents), dejan de encontrarlas.
 
-## De dónde vienen las reglas
+### De dónde vienen las reglas
 
-Cuatro repositorios de documentación de [AdobeDocs](https://github.com/AdobeDocs), cada uno fijado en un commit en
-[data/fonte.json](data/fonte.json):
+Cuatro repositorios de documentación de [AdobeDocs](https://github.com/AdobeDocs), cada uno fijado en un commit en [data/fonte.json](data/fonte.json):
 
 | Repositorio                                                                   | Publicado en                                                                                                                                          | Licencia           |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -81,29 +65,21 @@ Cuatro repositorios de documentación de [AdobeDocs](https://github.com/AdobeDoc
 Las reglas:
 
 - **Lo que la documentación no dice, la skill no lo afirma.** Nada de memoria ni de "buenas prácticas" sin fuente.
-- **Cada skill cita sus fuentes.** La sección Reference de cada `SKILL.md` lista el archivo de origen
-  (`<repositorio>/<ruta>`) y el enlace a la página pública.
-- **Ningún código de `magento/magento2`.** Su licencia (OSL-3.0) es recíproca e incompatible con la MIT de este
-  repositorio. Los ejemplos están adaptados de los de la documentación, con nombres genéricos (`Vendor_Module`).
+- **Cada skill cita sus fuentes.** La sección Reference de cada `SKILL.md` lista el archivo de origen (`<repositorio>/<ruta>`) y el enlace a la página pública.
+- **Ningún código de `magento/magento2`.** Su licencia (OSL-3.0) es recíproca e incompatible con la MIT de este repositorio. Los ejemplos están adaptados de los de la documentación, con nombres genéricos (`Vendor_Module`).
 
 Las atribuciones están en [NOTICE](NOTICE).
 
-## Pendiente
+### Pendiente
 
-- **Hyvä.** El tema y sus módulos de compatibilidad no están en la documentación de Adobe Commerce; una skill de Hyvä
-  necesita otra fuente, con su propia licencia.
+- **Hyvä.** El tema y sus módulos de compatibilidad no están en la documentación de Adobe Commerce; una skill de Hyvä necesita otra fuente, con su propia licencia.
+- **Adobe Commerce en la nube, la parte propia.** Las herramientas de la nube (`ece-tools`, `.magento.env.yaml`, los hooks de build y deploy) tienen su propia documentación, que no está entre las fuentes. La skill de deploy dice solo lo que las fuentes dicen de la nube.
+- **Page Builder** y el **admin con UI components** (forms y listings) quedan fuera de esta versión: están en las fuentes, pero son temas grandes para otra skill.
+- **Divisiones posibles.** Si crecen, el GraphQL puede salir de `adobe-commerce-webapi`, el JavaScript de `adobe-commerce-frontend-luma` y los indexers de `adobe-commerce-performance-and-cache`, cada uno en una skill propia.
 
-- **Adobe Commerce en la nube, la parte propia.** Las herramientas de la nube (`ece-tools`, `.magento.env.yaml`, los
-  hooks de build y deploy) tienen su propia documentación, que no está entre las fuentes. La skill de deploy dice solo
-  lo que las fuentes dicen de la nube.
-- **Page Builder** y el **admin con UI components** (forms y listings) quedan fuera de esta versión: están en las
-  fuentes, pero son temas grandes para otra skill.
-- **Divisiones posibles.** Si crecen, el GraphQL puede salir de `adobe-commerce-webapi`, el JavaScript de
-  `adobe-commerce-frontend-luma` y los indexers de `adobe-commerce-performance-and-cache`, cada uno en una skill propia.
+### Desarrollo
 
-## Desarrollo
-
-Se requiere Node >= 20.
+Pide Node `>= 20`.
 
 ```bash
 git clone https://github.com/zeluizr/adobe-commerce-skills.git
@@ -112,11 +88,7 @@ npm ci
 npm run verificar
 ```
 
-`scripts/verificar.sh` es el gate, el mismo que corre el CI: JSON válido; el frontmatter de cada skill (`name` igual a
-la carpeta, kebab-case, prefijo `adobe-commerce-`, `description` de hasta 1024 caracteres, `license` y
-`compatibility`); las siete secciones; una sección Reference con al menos una fuente y, en la misma línea, el enlace
-público que corresponde a esa ruta; que **cada ruta citada exista en el commit fijado**; Prettier; `bash -n`, y una
-búsqueda de rastros (rutas de una máquina, correos personales, nombres de clientes).
+`scripts/verificar.sh` es el gate, el mismo que corre el CI: JSON válido; el frontmatter de cada skill (`name` igual a la carpeta, kebab-case, prefijo `adobe-commerce-`, `description` de hasta 1024 caracteres, `license` y `compatibility`); las siete secciones; una sección Reference con al menos una fuente y, en la misma línea, el enlace público que corresponde a esa ruta; que **cada ruta citada exista en el commit fijado**; Prettier; `bash -n`, y una búsqueda de rastros (rutas de una máquina, correos personales, nombres de clientes).
 
 Para comprobar las fuentes sin red, contra clones de los cuatro repositorios que contengan el commit fijado:
 
@@ -124,20 +96,16 @@ Para comprobar las fuentes sin red, contra clones de los cuatro repositorios que
 FONTES_DIR=~/fuentes npm run verificar
 ```
 
-Sin `FONTES_DIR`, el gate pregunta a `raw.githubusercontent.com`; sin red, lo informa como "no verificado", nunca
-como verde (en el CI, es una falla).
+Sin `FONTES_DIR`, el gate pregunta a `raw.githubusercontent.com`; sin red, lo informa como "no verificado", nunca como verde (en el CI, es una falla).
 
-## Contribuir
+Una regla nueva necesita su página en la documentación oficial: lee la página, escribe la regla y cita la página en Reference. Para actualizar una fuente, cambia el commit en [data/fonte.json](data/fonte.json), relee las páginas citadas y corre el gate. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
-Conventional Commits. Las ramas salen de `dev` y el pull request va contra `dev`, nunca contra `qa` ni contra `main`;
-la promoción es merge de la rama entera.
+## Contribuir · Licencia
 
-Una regla nueva necesita su página en la documentación oficial: se lee la página, se escribe la regla y se cita la
-página en Reference. Para actualizar una fuente, se cambia el commit en [data/fonte.json](data/fonte.json), se releen
-las páginas citadas y se corre el gate.
+Abre un PR contra `dev` con Conventional Commits; la promoción a `qa` y `main` es merge de la rama entera.
 
-## Licencia
+[MIT](LICENSE). Las fuentes y sus licencias, en [NOTICE](NOTICE).
 
-[MIT](./LICENSE). Las fuentes y sus licencias, en [NOTICE](NOTICE).
+---
 
-_Hecho con amor y café por [commente.me](https://commente.me)_
+Hecho por [commente.me](https://commente.me) · hola@commente.me
